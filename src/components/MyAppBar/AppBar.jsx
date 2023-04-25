@@ -17,6 +17,7 @@ import InstallDesktopIcon from "@mui/icons-material/InstallDesktop";
 import { deleteAll } from "../../featuers/idb/postDbslice";
 import { useDispatch } from "react-redux";
 const MyAppBar = ({ setFill }) => {
+  const ref=useRef(null)
   const [openMenu, setOpenMenu] = useState(69);
   const [canClose, setCanClose] = useState(false);
   const [askingPrompt, setAskingprompt] = useState({});
@@ -81,7 +82,6 @@ const MyAppBar = ({ setFill }) => {
 
   const signUpHandler = () => {
     navigate("/signUp");
-  
   };
 
   const pwaInstalation = async () => {
@@ -144,12 +144,13 @@ const MyAppBar = ({ setFill }) => {
               }}
             >
               <SearchIcon sx={{ color: "#CE2619" }} />
-              <InputBase onChange={searchIputeHandler} sx={{ width: "100%" }} />
+              <InputBase onChange={searchIputeHandler} sx={{ width: "100%" }}  />
             </Paper>
             <br />
             <Button
               sx={{ display: "block", mx: { xs: "auto", md: "0" } }}
               onClick={signUpHandler}
+              ref={ref}
             >
               sign up
             </Button>

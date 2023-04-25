@@ -1,6 +1,6 @@
 
-import { openDB } from "idb";
-import { postContact } from "./services/fetching";
+import { openDB } from "../node_modules/idb";
+
 
 export const db = openDB("contacts", 1, {
   upgrade(db){

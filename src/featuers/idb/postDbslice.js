@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { openDB } from "idb";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { db } from "../../sw";
+import { db } from "../../../public/sw";
 
 
 export const getAllDB = createAsyncThunk("postDb/getAllDB", async () => {

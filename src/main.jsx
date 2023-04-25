@@ -19,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 if('serviceWorker' in navigator){
   navigator.serviceWorker.register("./sw.js",{
-    type:'module'
+    type:'module',
+    scope:"/"
   })
 }
