@@ -1,0 +1,16 @@
+{
+  "short_name": "vessel contact",
+  "name": "the redux project",
+  "description":"my first complitly project",
+  "start_url": "./",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "maskable_icon.png",
+      "type":"image/png",
+      "sizes":"192x192"
+    }
+  ],
+  "theme_color": "#CE2619",
+  "background_color": "#10489C"
+}

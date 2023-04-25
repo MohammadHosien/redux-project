@@ -1,0 +1,52 @@
+.basicsvg{
+    z-index: -2;
+    position: absolute;
+    top:0;
+    width:500px;
+    height: 500px;
+}
+
+.basicrightsvg{
+    z-index: -2;
+    position: absolute;
+    top:0;
+    right:0;
+    width:500px;
+    height: 500px;
+}
+@media screen and (max-width:904px)  {
+    .basicsvg{
+        z-index: -2;
+        position: absolute;
+        top:0;
+        width:300px;
+        height: 300px;
+    }
+    .basicrightsvg{
+        z-index: -2;
+        position: absolute;
+        top:0;
+        right:0;
+        width:300px;
+        height: 300px;
+    }
+    
+}
+@media screen and (max-width:582px)  {
+    .basicsvg{
+        z-index: -2;
+        position: absolute;
+        top:50px;
+        width:180px;
+        height: 180px;
+    }
+    .basicrightsvg{
+        z-index: -2;
+        position: absolute;
+        top:50px;
+        right:0;
+        width:180px;
+        height: 180px;
+    }
+    
+}

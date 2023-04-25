@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "name": "mohammad",
+      "lastname": "artaneh",
+      "gmail": "",
+      "numberPhone": "12345678",
+      "fav": false,
+      "user": "54MrRKrdMX5a0Q9NrvLeO",
+      "synced": true,
+      "id": "wPy9dFMClwW9CZMoQTVtw"
+    },
+    {
+      "name": "mohammas",
+      "lastname": "artaneh",
+      "gmail": "",
+      "numberPhone": "12345678",
+      "fav": false,
+      "user": "54MrRKrdMX5a0Q9NrvLeO",
+      "synced": true,
+      "id": "4YoOEajI9mxRcNrNei_a_"
+    }
+  ],
+  "users": [],
+  "fav": []
+}
