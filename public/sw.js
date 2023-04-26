@@ -23,8 +23,6 @@ self.addEventListener("install", (event) => {
         "/@vite/client",
         "/src/components/Home/Home.css",
         "/src/components/Home/Home.jsx",
-        "http://localhost:3000/src/main.jsx?t=1681689400357",
-        "http://localhost:3000/src/App.jsx?t=1681689400357",
       ]);
     })
   );

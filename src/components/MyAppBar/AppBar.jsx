@@ -25,6 +25,7 @@ const MyAppBar = ({ setFill }) => {
   const dispatch=useDispatch();
   useEffect(() => {
     window.addEventListener("beforeinstallprompt", (e) => {
+      console.log("kgf")
       e.preventDefault();
       setAskingprompt(e);
     });

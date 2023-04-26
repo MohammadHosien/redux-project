@@ -11,7 +11,7 @@ import { ToastContainer,toast } from "react-toastify";
 import {
   getUserFetching,
   userAddFetch,
-} from "../../featuers/posts/singUpSlice";
+} from "../../featuers/posts/userSlice";
 import * as jose from "jose";
 import { useEffect, useState } from "react";
 

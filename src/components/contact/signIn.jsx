@@ -4,7 +4,7 @@ import { ThemeProvider, Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer,toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { getUserFetching } from "../../featuers/posts/singUpSlice";
+import { getUserFetching } from "../../featuers/posts/userSlice";
 import { useEffect } from "react";
 import { useImmer } from "use-immer";
 import { useNavigate } from "react-router-dom";
