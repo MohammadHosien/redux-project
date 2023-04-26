@@ -1,23 +1,6 @@
 import "./App.css";
-// import Home from "./components/Home/Home";
-// import CreateContact from "./components/contact/createContact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import SignUp from "./components/contact/signUp";
-// import SignIn from "./components/contact/signIn";
 import { lazy, Suspense } from "react";
-// import { openDB } from "idb";
-// import { db } from "../public/sw";
-
-//  export const db = openDB("contacts", 1, {
-//   upgrade(db){
-//      db.createObjectStore("contacts",{
-//       keyPath:"id",
-//       autoIncrement:true
-//      })
-//   }
-// }
-// );
-
 const Home=lazy(()=>import('./components/Home/Home'));
 const SignIn=lazy(()=>import('./components/contact/signIn'));
 const SignUp=lazy(()=>import('./components/contact/signUp'));
