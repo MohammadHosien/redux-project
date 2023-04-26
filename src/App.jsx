@@ -1,7 +1,7 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home/Home";
 import { lazy, Suspense } from "react";
-const Home=lazy(()=>import('./components/Home/Home'));
 const SignIn=lazy(()=>import('./components/contact/signIn'));
 const SignUp=lazy(()=>import('./components/contact/signUp'));
 const  CreateContact =lazy(()=>import('./components/contact/createContact'));
