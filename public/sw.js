@@ -30,7 +30,11 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   caches.keys().then((cache) => {
-    return cache;
+    return cache.map(che=>{
+      if(che!==dynamic&&che!==stc){
+        caches.delete(che);
+      }
+    })
   });
 });
 
