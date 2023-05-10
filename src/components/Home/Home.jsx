@@ -128,7 +128,7 @@ const Home = () => {
             variant="h1"
             sx={{ fontSize: { xs: "30px", md: "50px" }, color: "red" }}
           >
-            vessel contact and new commit
+            vessel contact and hello
           </Typography>
           <Typography
             variant="h1"
