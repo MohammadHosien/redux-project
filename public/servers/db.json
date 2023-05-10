@@ -1,28 +1,11 @@
 {
-  "posts": [
-    {
-      "name": "mohammas",
-      "lastname": "tavoli",
-      "gmail": "mohoartan81@gmail.com",
-      "numberPhone": "12345678",
-      "fav": false,
-      "user": "UMkpfd7n0p8aJL20Q7qAt",
-      "synced": true,
-      "id": "36aHi3MY9vUEWdE9ZeiuV"
-    }
-  ],
+  "posts": [],
   "users": [
     {
       "name": "mohammad",
-      "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..w9A0-Bidg6ayEqgS7Rob_g.q2qPL8hmdyCWFdqPwLOEp6dDnLBHqZyYxQ2O81dV1JuG7MLFCxmkuZdsYcj5Cj2CrujTMI6N2WD_mOZ_hHZgGg.bMThplmUh4rIXLT1kdQ2_w",
+      "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..U3uRqGX0v1TA5bwrlDww0A.XoafrF04JvCSCifcwwicN2HAsdXmL9MzaT8Dq9OCAuiXXYPGCFRVEyV54gr3yD4MgB-OfDpNXkXtPFs2rxn89Q.EeL9De5fOsC3YkYDYBtL5Q",
       "gmail": "mohoartan81@gmail.com",
       "id": 1
-    },
-    {
-      "name": "hosein",
-      "token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..BzjtPcK7Raf17RstrudG3g.eCyCWtj0JmbTTDso8QiAJtfrHSzbnefh9bbOZxbUf3SVYlGKxlVoqRJzhH37nQ57nhxZZuqx8QK7a4ooY614Ew.hmcmsVON0M7eqa9ZS_2Mbg",
-      "gmail": "mohoartan@gmail.com",
-      "id": 2
     }
   ],
   "fav": []

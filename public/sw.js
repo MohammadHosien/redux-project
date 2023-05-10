@@ -1,5 +1,7 @@
 
 import { openDB } from "../node_modules/idb";
+const dynamic='dynemic';
+const stc='static'
 
 
 export const db = openDB("contacts", 1, {
@@ -13,7 +15,7 @@ export const db = openDB("contacts", 1, {
 );
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open("static").then((cache) => {
+    caches.open(stc).then((cache) => {
       cache.addAll([
         "/",
         "/manifest.json",
@@ -30,7 +32,11 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   caches.keys().then((cache) => {
-    return cache;
+    return cache.map(che=>{
+      if(che!==dynamic&&che!==stc){
+        caches.delete(che);
+      }
+    })
   });
 });
 
@@ -49,9 +55,9 @@ self.addEventListener("fetch", (evt) => {
         (cacheRes) =>
           cacheRes ||
           fetch(evt.request).then((fetchRes) =>
-            caches.open("dynemic2").then((cache) => {
+            caches.open(dynamic).then((cache) => {
               cache.put(evt.request.url, fetchRes.clone());
-              limitCacheSize("dynemic2", 75);
+              limitCacheSize(dynamic, 75);
               return fetchRes;
             })
           )

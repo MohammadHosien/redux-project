@@ -20,15 +20,19 @@ import { useDispatch } from "react-redux";
 import { addFavPostFetching } from "../../featuers/posts/favPostSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import { deleteFavFetching } from "../../featuers/posts/favPostSlice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { StylishInput } from "../../helpers/color";
 import WifiIcon from '@mui/icons-material/Wifi';
 import WifiOffIcon from '@mui/icons-material/WifiOff';
 import { useImmer } from "use-immer";
 import { memo } from "react";
 
-const Contact = memo(({ posts, userId }) => {
+
+const Contact = memo(({ posts, userId,fill }) => {
+
+  
   const dispatch = useDispatch();
+  const [filterofPost,setFillterofPost]=useState('')
 
   const [updating, setUpdating] = useState(false);
   const [updatingValue, setUpdaingValue] = useImmer({
@@ -39,6 +43,10 @@ const Contact = memo(({ posts, userId }) => {
     fav: posts.fav,
     user: userId,
   });
+  useEffect(()=>{
+     setFillterofPost(posts.name.replace(fill.get("s"),`<span style="color:red">${fill.get('s')}</span>`));  
+  },[fill])
+
   const deleteHandler = () => {
     if (!posts.fav) {
       dispatch(deleteFetchPost(posts.id));
@@ -74,9 +82,9 @@ const Contact = memo(({ posts, userId }) => {
           sx={{ bgcolor: "#031725", color: "white", position: "relative" }}
         >
           <h2 style={{ textAlign: "center" }}>
-            hello my name is <span style={{ color: "red" }}>{posts.name}</span>{posts.synced?<WifiIcon sx={{color:"red"}}/>:<WifiOffIcon sx={{color:"red"}}/>}
+            hello my name is <span  dangerouslySetInnerHTML={{__html:filterofPost}}></span>{posts.synced?<WifiIcon sx={{color:"red"}}/>:<WifiOffIcon sx={{color:"red"}}/>}
           </h2>
-          <div style={{ textAlign: "end" }}>
+          <div style={{ textAlign: "end" } }>
             <IconButton onClick={deleteHandler}>
               <DeleteIcon sx={{ color: "white" }} />
             </IconButton>
@@ -96,6 +104,7 @@ const Contact = memo(({ posts, userId }) => {
           <svg
             id="eu2gxJ71FEn1"
             style={{ height: "300px", position: "absolute", right: 0 }}
+            
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 600 600"

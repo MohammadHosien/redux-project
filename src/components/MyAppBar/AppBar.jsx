@@ -14,18 +14,19 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InstallDesktopIcon from "@mui/icons-material/InstallDesktop";
-import { deleteAll } from "../../featuers/idb/postDbslice";
 import { useDispatch } from "react-redux";
-const MyAppBar = ({ setFill }) => {
+const MyAppBar = ({ setFill,fill }) => {
   const ref=useRef(null)
   const [openMenu, setOpenMenu] = useState(69);
   const [canClose, setCanClose] = useState(false);
   const [askingPrompt, setAskingprompt] = useState({});
+
   const navigate = useNavigate();
   const dispatch=useDispatch();
+  
+
   useEffect(() => {
     window.addEventListener("beforeinstallprompt", (e) => {
-      console.log("kgf")
       e.preventDefault();
       setAskingprompt(e);
     });
@@ -61,9 +62,7 @@ const MyAppBar = ({ setFill }) => {
 
   let clearTime;
 
-  useEffect(() => {
-    setFill("");
-  }, []);
+ 
 
   const searchIputeHandler = (e) => {
     if (e.target.value === "") {
@@ -91,7 +90,6 @@ const MyAppBar = ({ setFill }) => {
     if (userChoises.outcome === "accepted") {
       console.log("u accept that");
     }
-
     setAskingprompt(null);
   };
 
@@ -145,7 +143,7 @@ const MyAppBar = ({ setFill }) => {
               }}
             >
               <SearchIcon sx={{ color: "#CE2619" }} />
-              <InputBase onChange={searchIputeHandler} sx={{ width: "100%" }}  />
+              <InputBase onChange={searchIputeHandler}  sx={{ width: "100%" }}  />
             </Paper>
             <br />
             <Button
@@ -160,7 +158,7 @@ const MyAppBar = ({ setFill }) => {
               sx={{ display: "block", mx: { xs: "auto", md: "30px" } }}
               onClick={singInHandler}
             >
-              sign in
+            sign In
             </Button>
             <br />
             <Button

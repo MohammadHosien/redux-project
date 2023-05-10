@@ -120,14 +120,15 @@ const Home = () => {
             </Paper>
           </Dialog>
         )}
-        <MyAppBar setFill={setFill} />
+        
+        <MyAppBar fill={fill.get('s')} setFill={setFill} />
         <BasicSvg />
         <div className="homeText">
           <Typography
             variant="h1"
             sx={{ fontSize: { xs: "30px", md: "50px" }, color: "red" }}
           >
-            vessel contact
+            vessel contact and new commit
           </Typography>
           <Typography
             variant="h1"
@@ -203,16 +204,16 @@ const Home = () => {
       </h1>
       <Grid container spacing={4} sx={{ mt: "40px" }}>
         {favs.map((fav) => (
-          <Contact posts={fav} key={fav.id} />
+          <Contact posts={fav} fill={fill} key={fav.id} />
         ))}
 
         {postsLoading !== ("reject" || "loading") ? (
           filterPost.map((post) => (
-            <Contact key={post.id} userId={userId} posts={post} />
+            <Contact key={post.id} fill={fill} userId={userId} posts={post} />
           ))
         ) : offlineLoading === "ful" ? (
           offlineDb.map((i) => (
-            <Contact key={i.id} userId={userId} posts={i}/>
+            <Contact key={i.id} userId={userId} fill={fill.get('s')} posts={i}/>
           ))
         ) : (
           <h1>loading</h1>
