@@ -1,10 +1,16 @@
 import "./App.css";
+<<<<<<< HEAD
 import Home from "./components/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 
 
+=======
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home/Home";
+import { lazy, Suspense } from "react";
+>>>>>>> 85c2cf476338489dbd860f871da2e651080e5ced
 const SignIn=lazy(()=>import('./components/contact/signIn'));
 const SignUp=lazy(()=>import('./components/contact/signUp'));
 const  CreateContact=lazy(()=>import('./components/contact/createContact'));
