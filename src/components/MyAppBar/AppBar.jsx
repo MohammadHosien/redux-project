@@ -62,13 +62,11 @@ const MyAppBar = ({ setFill,fill }) => {
 
   let clearTime;
 
-<<<<<<< HEAD
- 
-=======
+
   useEffect(() => {
     setFill({s:""});
   }, []);
->>>>>>> 85c2cf476338489dbd860f871da2e651080e5ced
+
 
   const searchIputeHandler = (e) => {
     if (e.target.value === "") {
