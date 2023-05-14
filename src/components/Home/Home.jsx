@@ -129,7 +129,9 @@ const Home = () => {
             variant="h1"
             sx={{ fontSize: { xs: "30px", md: "50px" }, color: "red" }}
           >
-            vessel contact add me 
+
+            vessel contact add sd
+
           </Typography>
           <Typography
             variant="h1"
